@@ -42,7 +42,7 @@ WHERE sales = (SELECT MAX(sales)
                 FROM bookstore
                 );
 		
--- Using a substring so I can see the variables I want to see, I can use the MAX aggregate function to find 
+-- Using a subquery so I can see the variables I want to see, I can use the MAX aggregate function to find 
 -- which book had the biggest sales in the store. Including it's name, publishes, sales and price
 
 -- Or I can use a simple order by function and whichever the top row is will be the most bought book
