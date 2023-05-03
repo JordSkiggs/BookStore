@@ -24,6 +24,7 @@ VALUES ('1', 'Alice in Wonderland', 'CreateSpace Independent Publishing Platform
 	   ('7', 'Harry Potter Childrens Collection: The Complete Collection', 'Bloomsbury', '978-1408856772', '5th Edition', '3872', '5641888', 'London', '39.22');
 
 -- I realised I made a mistake in two of the rows so I will update the city name for both of these
+
 UPDATE bookstore
 SET City = 'London'
 WHERE BookName= 'The Creative Gene' OR BookName = 'Solo Leveling Vol.1';
@@ -40,6 +41,7 @@ FROM bookstore
 WHERE sales = (SELECT MAX(sales)
                 FROM bookstore
                 );
+		
 -- Using a substring so I can see the variables I want to see, I can use the MAX aggregate function to find 
 -- which book had the biggest sales in the store. Including it's name, publishes, sales and price
 
@@ -72,7 +74,7 @@ FROM bookstore
 ORDER BY price DESC;
 
 -- Using an order by function I can see that the Disctionary of Modern American Philosophers is the most 
--- expensive at a whopping £1197
+-- expensive at a whopping Â£1197
 
 -- Similarly to a previous query, I can use a substring to return just the most expensive book
 
@@ -89,7 +91,7 @@ FROM bookstore
 ORDER BY sales ASC;
 
 -- I can see again using the ORDER BY function that the Disctionary of Modern American Philosophers
--- is the least preffered
+-- is the least preffered.
 -- Again I can use a substring and use the MIN function to return just that row
 
 SELECT BookName, Publisher, Sales, Price
